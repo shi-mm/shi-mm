@@ -20,6 +20,7 @@ Q^\prime(i,j) = q(i,j)\alpha(i,j), Q^\prime(j,i) = q(j,i)\alpha(j,i)
 <p>1 查询不重复的数据SQL：</p>
 <p>select 字段1,字段2,count(<em>) from 表名 group by 字段1,字段2 having count(</em>) = 1</p>
 <p>2 查询重复的数据SQL：</p>
+<p>select 字段1,字段2,count(<em>) from 表名 group by 字段1,字段2 having count(</em>) &gt; 1</p>
 <p>3 删除上面查询出的重复的数据：</p>
 <p>delete from 表名 a where 字段1,字段2 in (select 字段1,字段2,count(<em>) from 表名 group by 字段1,字段2 having count(</em>) &gt; 1)</p>
 </div>

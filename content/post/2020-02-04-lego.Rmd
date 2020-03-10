@@ -1,0 +1,33 @@
+---
+title: My Lego
+author: shimmer
+date: '2020-02-17'
+slug: lego
+categories:
+  - life
+tags:
+  - lego
+---
+
+
+
+##欢迎2020年的新成员---“Donald Duck”
+<!-- ![Donald Duck.](/img/lego-20.jpg) -->
+
+```{r  echo = FALSE, fig.cap ="Donald Duck", out.width ='200％'}
+knitr::include_graphics("/img/lego-20.jpg")
+```
+
+
+
+**全家福**
+
+<!-- ![Family Portrait.](/img/lego-all.jpg) -->
+
+
+```{r  echo = FALSE, fig.cap ="Family Portrait", out.width ='200％'}
+knitr::include_graphics("/img/lego-all.jpg")
+```
+
+
+
