@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>skill on A Hugo website</title>
+    <link>/tags/skill/</link>
+    <description>Recent content in skill on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/skill/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Oracle-Deduplication</title>
+      <link>/2020/02/27/oracle-deduplication/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/27/oracle-deduplication/</guid>
+      <description>重复的数据分两种，一种是表中部分字段的重复，一种是两行以上的记录完全一样。
+\[Q^\prime(i,j) = q(i,j)\alpha(i,j), Q^\prime(j,i) = q(j,i)\alpha(j,i)\]
+部分字段的重复1 查询不重复的数据SQL：
+select 字段1,字段2,count() from 表名 group by 字段1,字段2 having count() = 1
+2 查询重复的数据SQL：
+3 删除上面查询出的重复的数据：
+delete from 表名 a where 字段1,字段2 in (select 字段1,字段2,count() from 表名 group by 字段1,字段2 having count() &amp;gt; 1)
+完全重复记录的删除对于表中两行或以上的记录完全一样的情况，可以使用以下语句获取到去掉重复数据后的记录：
+select distinct * from 表名
+</description>
+    </item>
+    
+  </channel>
+</rss>

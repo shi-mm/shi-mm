@@ -1,0 +1,51 @@
+---
+title: Oracle-Deduplication
+author: shimm
+date: '2020-02-27'
+slug: oracle-Deduplication
+categories:
+  - SQL
+tags:
+  - skill
+---
+
+
+
+
+重复的数据分两种，一种是表中部分字段的重复，一种是两行以上的记录完全一样。
+
+$$
+Q^\prime(i,j) = q(i,j)\alpha(i,j), Q^\prime(j,i) = q(j,i)\alpha(j,i)
+$$
+
+
+
+### 部分字段的重复
+
+1 查询不重复的数据SQL：
+
+
+select 字段1,字段2,count(*) from 表名 group by 字段1,字段2 having count(*) = 1
+
+
+2 查询重复的数据SQL：
+
+```{sql eval=FALSE, include=FALSE}
+select 字段1,字段2,count(*) from 表名 group by 字段1,字段2 having count(*) > 1
+```
+
+
+3 删除上面查询出的重复的数据：
+
+
+delete from 表名 a where 字段1,字段2 in
+    (select 字段1,字段2,count(*) from 表名 group by 字段1,字段2 having count(*) > 1)
+
+
+### 完全重复记录的删除
+
+对于表中两行或以上的记录完全一样的情况，可以使用以下语句获取到去掉重复数据后的记录：
+
+
+select distinct * from 表名
+

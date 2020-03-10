@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="og:title" content=" Hello R Markdown &middot;  A Hugo website" />
+<meta property="og:site_name" content="A Hugo website" />
+<meta property="og:url" content="/2015/07/23/hello-r-markdown/" />
+
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content="2015-07-23T21:13:14-05:00" />
+    <meta property="og:article:tag" content="R Markdown" />
+    <meta property="og:article:tag" content="plot" />
+    <meta property="og:article:tag" content="regression" />
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="Hello R Markdown" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="/2015/07/23/hello-r-markdown/" />
+
+
+<title> Hello R Markdown &middot;  A Hugo website</title>
+
+
+    <meta name="description" content="A website built through Hugo and blogdown." />
+
+
+<meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/pure-min.css">
+
+
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+
+<link rel="stylesheet" href="/css/crisp.css">
+<link rel="stylesheet" href="/css/rrssb.css">
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/2015/07/23/hello-r-markdown/" />
+
+
+    
+
+
+    </head>
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-6">
+            <div class="header">
+    <div class="title">
+        <h1><a href="/">A Hugo website</a></h1>
+        
+        
+    </div>
+    <div class="logo">
+        
+        
+            
+                <a id="logo" href="/"><img src="#ZgotmplZ" alt="A Hugo website" /></a>
+            
+        
+    </div>
+
+    <ul class="sidebar-menu">
+        
+            <li class="sidebar-menu-item"><a href="/about/">About</a></li>
+        
+            <li class="sidebar-menu-item"><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+        
+            <li class="sidebar-menu-item"><a href="https://twitter.com/rstudio">Twitter</a></li>
+        
+    </ul>
+
+    <div id="follow-icons">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+        </div>
+        <div class="content pure-u-1 pure-u-md-5-6">
+            <div class="article singlepage" id="" class="post">
+                <div class="post-stamp">
+                    <h1 class="post-title">Hello R Markdown</h1>
+                    <span class="post-date">Jul 23, 2015 &middot; 1 minute read</span>
+                    
+                        <span class="taglist">
+                            <a class="label" href="/categories/r">R</a> 
+                        </span>
+                    
+
+                    <span class="taglist">
+                    
+                        &middot;
+                        
+                            <a href="/tags/r-markdown/">R Markdown</a>
+                        
+                            <a href="/tags/plot/">plot</a>
+                        
+                            <a href="/tags/regression/">regression</a>
+                        
+                    
+                    </span>
+                </div>
+                
+
+
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932</code></pre>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<pre class="r"><code>par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
+  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
+  init.angle = -50, border = NA
+)</code></pre>
+<div class="figure"><span id="fig:pie"></span>
+<img src="/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption">
+Figure 1: A fancy pie chart.
+</p>
+</div>
+</div>
+
+                
+                
+    <div id="comments">
+        
+        
+    </div>
+
+
+                
+
+
+            </div>
+        </div>
+    </body>
+</html>
+
